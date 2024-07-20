@@ -5,7 +5,9 @@ import Chat from "../../imgs/chat.svg";
 import Login from "../../imgs/login.svg";
 import Position from "../../imgs/position.svg";
 import styled from "styled-components";
+import { Hero } from "../../components/Hero/Hero";
 
+//! header
 const LocationBtn = styled.button`
   border-radius: 36px;
   background-color: rgb(255, 242, 242);
@@ -67,6 +69,83 @@ const HeaderWrapper = styled.div`
   align-items: center;
 `;
 
+// !hero
+const HeroTitle = styled.h1`
+  font-family: "Yeseva One";
+  font-size: 42px;
+  font-weight: 400;
+  line-height: 120%;
+  margin-bottom: 15px;
+  max-width: 463px;
+  color: #011936;
+`;
+
+const HeroDescription = styled.p`
+  font-family: "Verdana";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+  color: #43607c;
+  max-width: 463px;
+`;
+
+const HeroSearchInputBox = styled.div`
+  display: flex;
+  align-items: center;
+  margin-top: 30px;
+`;
+
+const HeroSearchInput = styled.input`
+  display: block;
+  border-radius: 5px 0px 0px 5px;
+  border: 1px solid #dfdfdf;
+  width: 720px;
+  height: 48px;
+  // padding: 10px 20px;
+`;
+
+const HeroSearchBtn = styled.button`
+  display: block;
+  padding: 14px 30px;
+  border-radius: 0px 5px 5px 0px;
+  border: 1px solid #fdad6d;
+  background-color: #fdad6d;
+  color: #8e4a4e;
+  font-family: "Verdana";
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 120%;
+  height: 50px;
+`;
+
+const HeroPopularSearchList = styled.ul`
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  max-width: 800px;
+  gap: 10px;
+  margin-top: 30px;
+`;
+
+const HeroPopularSearchItem = styled.li`
+  border-radius: 40px;
+  background-color: #fff2f2;
+  padding: 5px 20px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+`;
+
+const HeroPopularSearchText = styled.p`
+  color: #8e4a4e;
+  font-family: "Verdana";
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 120%;
+`;
+
 export const Main = () => {
   return (
     <>
@@ -98,6 +177,54 @@ export const Main = () => {
           </HeaderWrapper>
         </Container>
       </Header>
+      <Hero>
+        <Container>
+          <HeroTitle>Пошукаємо щось смачненького?</HeroTitle>
+          <HeroDescription>
+            Ми об’єднали кондитерів з різних міст, щоб необхідні смаколики можна
+            було замовити ще легше
+          </HeroDescription>
+          <HeroSearchInputBox>
+            <HeroSearchInput />
+            <HeroSearchBtn>Шукати</HeroSearchBtn>
+          </HeroSearchInputBox>
+          <HeroPopularSearchList>
+            <HeroPopularSearchItem>
+              <HeroPopularSearchText>На день народження</HeroPopularSearchText>
+            </HeroPopularSearchItem>
+            <HeroPopularSearchItem>
+              <HeroPopularSearchText>З фруктами</HeroPopularSearchText>
+            </HeroPopularSearchItem>
+            <HeroPopularSearchItem>
+              <HeroPopularSearchText>Патріотичні</HeroPopularSearchText>
+            </HeroPopularSearchItem>
+            <HeroPopularSearchItem>
+              <HeroPopularSearchText>Для чоловіків</HeroPopularSearchText>
+            </HeroPopularSearchItem>
+            <HeroPopularSearchItem>
+              <HeroPopularSearchText>Для весілля</HeroPopularSearchText>
+            </HeroPopularSearchItem>
+            <HeroPopularSearchItem>
+              <HeroPopularSearchText>Без глютену</HeroPopularSearchText>
+            </HeroPopularSearchItem>
+            <HeroPopularSearchItem>
+              <HeroPopularSearchText>Веганські</HeroPopularSearchText>
+            </HeroPopularSearchItem>
+            <HeroPopularSearchItem>
+              <HeroPopularSearchText>Без цукру </HeroPopularSearchText>
+            </HeroPopularSearchItem>
+            <HeroPopularSearchItem>
+              <HeroPopularSearchText>Для дівчат</HeroPopularSearchText>
+            </HeroPopularSearchItem>
+            <HeroPopularSearchItem>
+              <HeroPopularSearchText>З квітами</HeroPopularSearchText>
+            </HeroPopularSearchItem>
+            <HeroPopularSearchItem>
+              <HeroPopularSearchText>Класичні рецепти</HeroPopularSearchText>
+            </HeroPopularSearchItem>
+          </HeroPopularSearchList>
+        </Container>
+      </Hero>
     </>
   );
 };
