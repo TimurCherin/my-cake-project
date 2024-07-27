@@ -1,6 +1,7 @@
-/* @import-normalize;
+import { createGlobalStyle } from "styled-components";
 
-body {
+const GlobalStyle = createGlobalStyle`
+ body {
   font-family: "Yeseva One";
 }
 * {
@@ -39,4 +40,8 @@ input {
 textarea {
   outline: none;
   resize: none;
-} */
+}
+
+`;
+
+export default GlobalStyle;

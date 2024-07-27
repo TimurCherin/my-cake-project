@@ -1,11 +1,11 @@
-import { Header } from "../../components/Header/Header";
-import { Container } from "../../components/Container/Container";
-import { Logo } from "../../components/Logo/Logo";
+import { Header } from "../../components/Header/Header.styled";
+import { Container } from "../../components/Container/Container.styled";
+import { Logo } from "../../components/Logo/Logo.styled";
 import Chat from "../../imgs/chat.svg";
 import Login from "../../imgs/login.svg";
 import Position from "../../imgs/position.svg";
 import styled from "styled-components";
-import { Hero } from "../../components/Hero/Hero";
+import { Hero } from "../../components/Hero/Hero.styled";
 
 //! header
 const LocationBtn = styled.button`
