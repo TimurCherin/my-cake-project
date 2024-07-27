@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.js": "/my-cake-project/static/js/main.9b9974fc.js",
+    "index.html": "/my-cake-project/index.html",
+    "static/media/position.svg": "/my-cake-project/static/media/position.e09d8a44723398b18e440a1e3d91571e.svg",
+    "static/media/login.svg": "/my-cake-project/static/media/login.6717228207290a21b1fc6635f3fedb62.svg",
+    "static/media/chat.svg": "/my-cake-project/static/media/chat.0f5d6a09db078999e95a77bdd697df1d.svg",
+    "main.9b9974fc.js.map": "/my-cake-project/static/js/main.9b9974fc.js.map"
+  },
+  "entrypoints": [
+    "static/js/main.9b9974fc.js"
+  ]
+}
