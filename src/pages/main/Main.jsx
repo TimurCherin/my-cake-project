@@ -1,11 +1,11 @@
-import { Header } from "../../components/Header/Header.styled";
-import { Container } from "../../components/Container/Container.styled";
-import { Logo } from "../../components/Logo/Logo.styled";
+import { Header } from "../../components/general-components/Header/Header.styled";
+import { Container } from "../../components/general-components/Container/Container.styled";
+import { Logo } from "../../components/general-components/Logo/Logo.styled";
 import Chat from "../../imgs/chat.svg";
 import Login from "../../imgs/login.svg";
 import Position from "../../imgs/position.svg";
 import styled from "styled-components";
-import { Hero } from "../../components/Hero/Hero.styled";
+import { Hero } from "../../components/main-page/Hero/Hero.styled";
 
 //! header
 const LocationBtn = styled.button`
@@ -86,7 +86,7 @@ const HeroDescription = styled.p`
   font-style: normal;
   font-weight: 400;
   line-height: 24px;
-  color: #43607c;
+  color: ${(props) => props.theme.colors.textColor};
   max-width: 463px;
 `;
 
@@ -110,10 +110,10 @@ const HeroSearchBtn = styled.button`
   padding: 14px 30px;
   border-radius: 0px 5px 5px 0px;
   border: 1px solid #fdad6d;
-  background-color: #fdad6d;
+  background-color: ${(props) => props.theme.colors.buttonsColor};
   color: #8e4a4e;
   font-family: "Verdana";
-  font-size: 18px;
+  font-size: ${(props) => props.theme.spacings(4.5)};
   font-weight: 400;
   line-height: 120%;
   height: 50px;
@@ -144,6 +144,14 @@ const HeroPopularSearchText = styled.p`
   font-size: 16px;
   font-weight: 400;
   line-height: 120%;
+`;
+
+const HeroProductsList = styled.ul`
+  display: flex;
+  align-items: center;
+
+  li {
+  }
 `;
 
 export const Main = () => {
@@ -223,6 +231,9 @@ export const Main = () => {
               <HeroPopularSearchText>Класичні рецепти</HeroPopularSearchText>
             </HeroPopularSearchItem>
           </HeroPopularSearchList>
+          <HeroProductsList>
+            <li></li>
+          </HeroProductsList>
         </Container>
       </Hero>
     </>
