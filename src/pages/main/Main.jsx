@@ -232,6 +232,7 @@ export const Main = () => {
           <HeroProductsList>
             <li></li>
           </HeroProductsList>
+          <Btn text="Переглянути всі"></Btn>
         </Container>
       </Hero>
     </>
