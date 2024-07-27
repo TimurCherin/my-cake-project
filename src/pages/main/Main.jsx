@@ -6,6 +6,7 @@ import Login from "../../imgs/login.svg";
 import Position from "../../imgs/position.svg";
 import styled from "styled-components";
 import { Hero } from "../../components/main-page/Hero/Hero.styled";
+import Btn from "../../components/general-components/Btn/Btn";
 
 //! header
 const LocationBtn = styled.button`
@@ -234,6 +235,7 @@ export const Main = () => {
           <HeroProductsList>
             <li></li>
           </HeroProductsList>
+          <Btn text="Переглянути всі"></Btn>
         </Container>
       </Hero>
     </>

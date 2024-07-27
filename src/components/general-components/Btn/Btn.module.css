@@ -1,0 +1,23 @@
+.baseBtn {
+    display: flex;
+    height: 35px;
+    padding: 5px 20px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border-radius: 30px;
+    background: var(--blue-bg-border, #DCEBF8);
+    pointer-events: all;
+}
+.baseBtn:hover {
+    cursor: pointer;
+}
+
+.successBtn {
+    background-color: green;
+}
+
+.errorBtn {
+    background-color: red;
+    color: white;
+}
