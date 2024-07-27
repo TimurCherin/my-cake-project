@@ -6,6 +6,7 @@ import Login from "../../imgs/login.svg";
 import Position from "../../imgs/position.svg";
 import styled from "styled-components";
 import { Hero } from "../../components/main-page/Hero/Hero.styled";
+import { List } from "../../components/general-components/List/List.styled";
 
 //! header
 const LocationBtn = styled.button`
@@ -119,10 +120,7 @@ const HeroSearchBtn = styled.button`
   height: 50px;
 `;
 
-const HeroPopularSearchList = styled.ul`
-  display: flex;
-  align-items: center;
-  flex-wrap: wrap;
+const HeroPopularSearchList = styled(List)`
   max-width: 800px;
   gap: 10px;
   margin-top: 30px;
