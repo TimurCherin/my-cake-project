@@ -1,0 +1,320 @@
+import styled from "styled-components";
+import { Container } from "../components/general-components/Container/Container.styled";
+import checkbox from "./checkbox.svg";
+import backup from "./backup.svg";
+import data from "./data.json";
+
+const safeArr = [];
+function createUniqueId() {
+  const id = "id" + Math.random().toString(16).slice(2);
+  if (safeArr.includes(id)) {
+    createUniqueId();
+  } else {
+    safeArr.push(id);
+    return id;
+  }
+}
+
+const Filter = styled.div`
+  width: 252px;
+  height: 311px;
+  margin-right: 40px;
+  h2 {
+    color: #011936;
+    font-family: "Yeseva One";
+    font-size: 24px;
+    line-height: 1.25;
+    margin-bottom: 30px;
+    font-weight: 400;
+  }
+  ul {
+    font-family: "Roboto";
+    display: flex;
+    flex-direction: column;
+    color: #011936;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 1.33;
+    gap: 8px;
+    li {
+      font-family: "Roboto";
+      padding-left: 2px;
+      box-sizing: border-box;
+      display: flex;
+      flex-direction: row;
+      gap: 10px;
+      color: #011936;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 1.5;
+      align-items: center;
+      img {
+        cursor: pointer;
+        width: 30px;
+        height: 30px;
+        flex-shrink: 0;
+      }
+    }
+  }
+`;
+
+const Searchbar = styled.div`
+  display: flex;
+  margin: 40px 0px;
+  width: 100%;
+  height: 50px;
+  input {
+    width: 1300px;
+    height: 100%;
+    padding: 10px 20px;
+    box-sizing: border-box;
+    font-family: "Roboto";
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1.33;
+    border-radius: 5px 0px 0px 5px;
+    border: 1px solid #dfdfdf;
+    &::placeholder {
+      color: #c2c2c2;
+    }
+  }
+  button {
+    width: 132px;
+    height: 100%;
+    border-radius: 0px 5px 5px 0px;
+    border: 1px solid #fdad6d;
+    background: #fdad6d;
+    padding: 5px 30px;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    color: #8e4a4e;
+    font-family: "Roboto";
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1.2;
+    cursor: pointer;
+    &:hover {
+      background: #de9960;
+    }
+  }
+`;
+
+const Card = styled.li`
+  display: flex;
+  flex-direction: column;
+  width: 373px;
+  height: 444px;
+  border-radius: 5px;
+  background: #fff;
+  box-shadow: 0px 2px 10px 0px rgba(67, 96, 124, 0.25);
+  padding-bottom: 20px;
+  box-sizing: border-box;
+  * {
+    margin-bottom: 20px;
+    width: 100%;
+    padding: 0px 25px;
+    box-sizing: border-box;
+  }
+  img {
+    padding: 0;
+    flex-shrink: 1;
+    border-radius: 5px;
+    height: 200px;
+  }
+  h3 {
+    color: #43607c;
+    font-family: "Roboto";
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 1.5;
+  }
+  p {
+    color: #43607c;
+    font-family: "Roboto";
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.71;
+    margin-bottom: auto;
+  }
+  button {
+    display: flex;
+    height: 40px;
+    padding: 10px 20px;
+    width: 333px;
+    margin: 0;
+    margin-left: 20px;
+    justify-content: center;
+    align-items: center;
+    align-self: stretch;
+    border-radius: 50px;
+    background: #fdad6d;
+    color: #5e2d07;
+    font-family: "Roboto";
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.2;
+    transition: 350ms;
+    cursor: pointer;
+    &:hover {
+      background: #de9960;
+    }
+  }
+`;
+
+const List = styled.ul`
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  width: 1180px;
+  margin-bottom: 30px;
+`;
+
+const LoadMore = styled.button`
+  width: 1180px;
+  display: flex;
+  height: 50px;
+  padding: 5px 10px;
+  box-sizing: border-box;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  align-self: stretch;
+  border-radius: 49px;
+  border: 1px solid #84a6c2;
+  background: #fff;
+  color: var(--CTA-blue, #43607c);
+  font-family: "Roboto";
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.2;
+  margin-left: auto;
+  margin-bottom: 40px;
+  cursor: pointer;
+  transition: 350ms;
+  &:hover {
+    background: #e5e5e5;
+  }
+  img {
+    width: 25px;
+    height: 25px;
+  }
+`;
+
+const Pagination = styled.ul`
+  position: relative;
+  display: flex;
+  width: 290px;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+  height: 50px;
+  margin-left: 720px;
+  margin-bottom: 50px;
+  li {
+    color: #5e2d07;
+    font-family: "Roboto";
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1.2;
+    box-sizing: border-box;
+    border-radius: 50px;
+    border: 1px solid #ffe2ca;
+    background: #fff;
+    display: flex;
+    width: 50px;
+    height: 50px;
+    padding: 5px 10px;
+    justify-content: center;
+    align-items: center;
+    transition: 350ms;
+    cursor: pointer;
+    &:hover {
+      font-weight: 700;
+      background: #d0d0d0;
+    }
+  }
+`;
+
+const LeftArrow = styled.div`
+    position: absolute;
+    top: 13px;
+    left: -35px;
+    font-weight: 900;
+    cursor: pointer;
+`;
+const RightArrow = styled.div`
+    position: absolute;
+    top: 13px;
+    right: -35px;
+    font-weight: 900;
+    cursor: pointer;
+`;
+
+const result = data.map((card) => {
+  return (
+    <Card key={createUniqueId()}>
+      <img src={card.url} alt="bakery" />
+      <h3>{card.title}</h3>
+      <p>{card.description}</p>
+      <button>Читати далі</button>
+    </Card>
+  );
+});
+
+export default function Articles() {
+  return (
+    <section>
+      <Container>
+        <Searchbar>
+          <input type="text" placeholder="Як приготувати класичний чізкейк" />
+          <button type="button">Шукати</button>
+        </Searchbar>
+        <div style={{ display: "flex", flexWrap: "wrap" }}>
+          <Filter>
+            <h2>Цікаві та корисні статті</h2>
+            <ul>
+              Тематика
+              <li key={createUniqueId()}>
+                <img src={checkbox} alt="checkbox" />
+                Рецепти
+              </li>
+              <li key={createUniqueId()}>
+                <img src={checkbox} alt="checkbox" />
+                Корисні поради на кухні
+              </li>
+              <li key={createUniqueId()}>
+                <img src={checkbox} alt="checkbox" />
+                Підбірки
+              </li>
+              <li key={createUniqueId()}>
+                <img src={checkbox} alt="checkbox" />
+                Робота з клієнтами
+              </li>
+              <li key={createUniqueId()}>
+                <img src={checkbox} alt="checkbox" />
+                Цікаві історії
+              </li>
+            </ul>
+          </Filter>
+          <List>{result}</List>
+          <LoadMore>
+            <img src={backup} alt="LoadMore" />
+            Більше статей
+          </LoadMore><Pagination>
+          <LeftArrow>&#x3c;</LeftArrow>
+          <li key={createUniqueId()}>1</li>
+          <li key={createUniqueId()}>2</li>
+          <li key={createUniqueId()} style={{fontWeight: "700", background:"#FDAD6D"}}>3</li>
+          <li key={createUniqueId()}>4</li>
+          <li key={createUniqueId()}>5</li>
+          <RightArrow>&#x3e;</RightArrow>
+        </Pagination>
+        </div>
+        
+      </Container>
+    </section>
+  );
+}

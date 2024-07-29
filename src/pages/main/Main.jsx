@@ -5,14 +5,19 @@ import Chat from "../../imgs/chat.svg";
 import Login from "../../imgs/login.svg";
 import Position from "../../imgs/position.svg";
 import styled from "styled-components";
+// import Articles from "../Articles.jsx";
+
 import { Hero } from "../../components/main-page/Hero/Hero.styled";
 import { List } from "../../components/general-components/List/List.styled";
-import Footerr from "../../components/general-components/Footer/Footer"
+import Btn from "../../components/general-components/Btn/Btn";
+
+// import Footerr from "../../components/general-components/Footer/Footer"
+
 //! header
 const LocationBtn = styled.button`
   border-radius: 36px;
   background-color: rgb(255, 242, 242);
-  display: flex;
+  display: flex; 
   justify-content: center;
   align-items: center;
   padding: 5px 20px 5px 20px;
@@ -183,9 +188,10 @@ export const Main = () => {
           </HeaderWrapper>
         </Container>
       </Header>
-      <Hero>
-        <Container>
-          <HeroTitle>Пошукаємо щось смачненького?</HeroTitle>
+      {/* <Articles></Articles> */}
+       <Hero>
+        <Container> 
+           <HeroTitle>Пошукаємо щось смачненького?</HeroTitle>
           <HeroDescription>
             Ми об’єднали кондитерів з різних міст, щоб необхідні смаколики можна
             було замовити ще легше
@@ -232,11 +238,10 @@ export const Main = () => {
           <HeroProductsList>
             <li></li>
           </HeroProductsList>
-          <Btn text="Переглянути всі"></Btn>
-        </Container>
-      </Hero>
-      <Footerr/>
-      <Footerr/>
+          <Btn text="Переглянути всі"></Btn> 
+         </Container>
+      </Hero> 
+      <Footerr></Footerr>
     </>
   );
 };
