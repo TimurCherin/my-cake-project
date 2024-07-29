@@ -11,6 +11,8 @@ import { Hero } from "../../components/main-page/Hero/Hero.styled";
 import { List } from "../../components/general-components/List/List.styled";
 import Btn from "../../components/general-components/Btn/Btn";
 
+// import Footerr from "../../components/general-components/Footer/Footer"
+
 //! header
 const LocationBtn = styled.button`
   border-radius: 36px;
@@ -239,6 +241,7 @@ export const Main = () => {
           <Btn text="Переглянути всі"></Btn> 
          </Container>
       </Hero> 
+      <Footerr></Footerr>
     </>
   );
 };
