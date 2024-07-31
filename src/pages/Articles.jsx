@@ -1,8 +1,8 @@
 import styled from "styled-components";
 import { Container } from "../components/general-components/Container/Container.styled";
-import checkbox from "./checkbox.svg";
 import backup from "./backup.svg";
 import data from "./data.json";
+
 
 const safeArr = [];
 function createUniqueId() {
@@ -18,7 +18,6 @@ function createUniqueId() {
 const Filter = styled.div`
   width: 252px;
   height: 311px;
-  margin-right: 40px;
   h2 {
     color: #011936;
     font-family: "Yeseva One";
@@ -37,6 +36,7 @@ const Filter = styled.div`
     line-height: 1.33;
     gap: 8px;
     li {
+      position: relative;
       font-family: "Roboto";
       padding-left: 2px;
       box-sizing: border-box;
@@ -63,6 +63,8 @@ const Searchbar = styled.div`
   margin: 40px 0px;
   width: 100%;
   height: 50px;
+  padding-left: 20px;
+  box-sizing: border-box;
   input {
     width: 1300px;
     height: 100%;
@@ -171,6 +173,7 @@ const List = styled.ul`
 `;
 
 const LoadMore = styled.button`
+  margin-right: 20px;
   width: 1180px;
   display: flex;
   height: 50px;
@@ -211,7 +214,7 @@ const Pagination = styled.ul`
   margin-left: auto;
   margin-right: auto;
   height: 50px;
-  margin-left: 720px;
+  margin-left: 700px;
   margin-bottom: 50px;
   li {
     color: #5e2d07;
@@ -264,6 +267,17 @@ const result = data.map((card) => {
   );
 });
 
+const Checkbox = styled.input`
+  width: 25px;
+  height: 25px;
+  appearance: none;
+  border: 3.75px solid #43607c;
+  border-radius: 2px;
+  &:checked {
+    appearance: auto;
+  }
+`;
+
 export default function Articles() {
   return (
     <section>
@@ -272,29 +286,29 @@ export default function Articles() {
           <input type="text" placeholder="Як приготувати класичний чізкейк" />
           <button type="button">Шукати</button>
         </Searchbar>
-        <div style={{ display: "flex", flexWrap: "wrap" }}>
+        <div style={{ display: "flex", flexWrap: "wrap", paddingLeft: "20px", boxSizing: "border-box" }}>
           <Filter>
             <h2>Цікаві та корисні статті</h2>
             <ul>
               Тематика
               <li key={createUniqueId()}>
-                <img src={checkbox} alt="checkbox" />
+                <Checkbox type="checkbox"></Checkbox>
                 Рецепти
               </li>
               <li key={createUniqueId()}>
-                <img src={checkbox} alt="checkbox" />
+                <Checkbox type="checkbox"></Checkbox>
                 Корисні поради на кухні
               </li>
               <li key={createUniqueId()}>
-                <img src={checkbox} alt="checkbox" />
+                <Checkbox type="checkbox"></Checkbox>
                 Підбірки
               </li>
               <li key={createUniqueId()}>
-                <img src={checkbox} alt="checkbox" />
+                <Checkbox type="checkbox"></Checkbox>
                 Робота з клієнтами
               </li>
               <li key={createUniqueId()}>
-                <img src={checkbox} alt="checkbox" />
+                <Checkbox type="checkbox"></Checkbox>
                 Цікаві історії
               </li>
             </ul>
