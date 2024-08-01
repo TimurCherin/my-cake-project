@@ -1,24 +1,31 @@
 import styled from "styled-components";
-import stateImg1 from "../../../../src/imgs/StatePng/";
-// import stateImg2 from "../../imgs/cupakes/cupake-2.jpg";
-// import stateImg3 from "../../imgs/cupckes/cupake-3.jpg";
-// import stateImg4 from "../../imgs/cupcaes/cupake-4.jpg";
-// import stateImg5 from "../../imgs/cupcaes/cucake-5.jpg";
-const GlawBox = styled.div``;
+import stateImg1 from "../../../../src/imgs/StatePng/photoState.png";
+import stateImg2 from "../../../../src/imgs/StatePng/photoState1.png";
+import stateImg3 from "../../../../src/imgs/StatePng/photoState2.png";
+import stateImg4 from "../../../../src/imgs/StatePng/photoState3.png";
+import stateImg5 from "../../../../src/imgs/StatePng/photoState4.png";
+const GlawBox = styled.div`
+margin-bottom: 80px;
+margin-top:80px;
+`;
 
 const Ul = styled.ul`
   display: flex;
   line-style: none;
+  gap: 18px;
 `;
 const BoxesFlex = styled.div`
   display: flex;
   align-items: center;
+  margin-bottom: 20px;
+  
 `;
 const Boxes = styled.div`
 
 `;
 const BoxesFlexInfo = styled.div`
-margin-left: 1128px;
+position: absolute;
+right: 205px;
 display:flex;
 `;
 const GlawTxtState = styled.h2`
@@ -51,42 +58,38 @@ const StateArrowBtn = styled.button`
   background-color: transparent;
   border: none;
 `;
-const CakesCardBox = styled.div`
-  padding: 15px 15px 15px 15px;
-  box-shadow: ${(props) => props.theme.shadows.cupcakesCard};
-  border-radius: 5px;
-  height: 114px;
-  display: flex;
-  /* align-items: center; */
-  justify-content: space-between;
-  flex-direction: column;
+const StateCardBox = styled.div`
+display: flex;
+width: 280px;
+padding-bottom: 15px;
+flex-direction: column;
+align-items: center;
+gap: 20px;
+border-radius: 5px;
+background: var(--White, #FFF);
+box-shadow: 0px 2px 10px 0px rgba(67, 96, 124, 0.25);
+
 `;
 
-const CakeCardTitle = styled.h2`
-  color: ${(props) => props.theme.colors.accentColor};
-  font-family: Verdana;
-  font-size: ${(props) => props.theme.spacings(4.5)};
-  font-weight: 700;
-  line-height: 120%;
-  /* margin-top: 15px; */
+const StateCardTitle = styled.h2`
+width: 248px;
+color: var(--CTA-blue, #43607C);
+font-family: Verdana;
+font-size: 16px;
+font-style: normal;
+font-weight: 700;
+line-height: 24px;
 `;
-const CakeCardSubtitle = styled.p`
-  color: ${(props) => props.theme.colors.titleColor};
-  font-family: Verdana;
-  font-size: ${(props) => props.theme.spacings(4)};
-  font-weight: 400;
-  line-height: 20px;
-  /* margin-top: 10px; */
-  max-width: 250px;
+const StateCardSubtitle = styled.p`
+width: 248.4px;
+color: var(--CTA-blue, #43607C);
+font-family: Verdana;
+font-size: 14px;
+font-style: normal;
+font-weight: 400;
+line-height: 24px;
 `;
-const CakeCardDescription = styled.p`
-  color: #84a6c2;
-  font-family: Verdana;
-  font-size: ${(props) => props.theme.spacings(3.5)};
-  font-weight: 400;
-  line-height: 120%;
-  /* margin-top: 5px; */
-`;
+
 export default function ListState() {
   return (
     <GlawBox>
@@ -142,17 +145,54 @@ export default function ListState() {
 
       <Ul>
       <li>
-              <img src={stateImg1} alt="cake-2" />
-              <CakesCardBox>
-                <CakeCardTitle>520 грн</CakeCardTitle>
-                <CakeCardSubtitle>
-                  Весільний триярусний торт з фруктами та квітами
-                </CakeCardSubtitle>
-                <CakeCardDescription>4 варіанти начинок</CakeCardDescription>
-              </CakesCardBox>
+      <StateCardBox>
+              <img src={stateImg1} alt="state" />
+             
+                <StateCardTitle>Кращі кондитерські Києва</StateCardTitle>
+                <StateCardSubtitle>
+                Ми знаємо, де у Києві готують і подають смачні десерти та фірмові булочки, шоколадні цукерки ручної роботи, а також де можна купити натуральний шоколад. І вам розкажемо...
+                </StateCardSubtitle>
+              </StateCardBox>
+            </li>
+            <li>
+      <StateCardBox>
+              <img src={stateImg2} alt="state" />
+             
+                <StateCardTitle>Як приготувати справжній французький круасан</StateCardTitle>
+                <StateCardSubtitle>
+                Всі, хто любить круасани, мріють одного разу опинитися в маленькій французькій пекарні з гарячим круасаном в руках. Чи це не чудово? Ті, хто там побу...
+                </StateCardSubtitle>
+              </StateCardBox>
             </li>
 
+            <li>
+      <StateCardBox>
+              <img src={stateImg3} alt="state" />
+             
+                <StateCardTitle>Рецепти найсмачніших макарунів з незвичними смаками</StateCardTitle>
+                <StateCardSubtitle>
+                Вишукане і неймовірно смачне французьке печиво «Макаронів» за класичним рецептом готується на основі мигдальної муки. Н...                </StateCardSubtitle>
+              </StateCardBox>
+            </li>
 
+            <li>
+      <StateCardBox>
+              <img src={stateImg4} alt="state" />
+             
+                <StateCardTitle>Малинове безе в домашніх умовах</StateCardTitle>
+                <StateCardSubtitle>
+                Безе, або меренга - це класичний французький десерт з запеченого білкового крему. Неймовірно ніжний, м'який всередині і трохи хрусткий зов...</StateCardSubtitle>
+              </StateCardBox>
+            </li>
+            <li>
+      <StateCardBox>
+              <img src={stateImg5} alt="state" />
+             
+                <StateCardTitle>Рецепти шоколаду без цукру</StateCardTitle>
+                <StateCardSubtitle>
+                Розглянемо популярні способи приготування домашнього шоколаду. Його головна особливість — можливість комбінування різних продуктів...</StateCardSubtitle>
+              </StateCardBox>
+            </li>
       </Ul>
     </GlawBox>
   );
