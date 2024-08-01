@@ -38,7 +38,8 @@ import { List } from "../../components/general-components/List/List.styled";
 import Btn from "../../components/general-components/Btn/Btn";
 
 import Footerr from "../../components/general-components/Footer/Footer";
-
+import ListState from "../../components/general-components/upFooterListState/ListState";
+import ListTopPip from "../../components/general-components/upUpFooterListBestCondeters/ListBestCoditers";
 //! header
 const LocationBtn = styled.button`
   border-radius: 36px;
@@ -804,7 +805,11 @@ export const Main = () => {
           </MoreClientsBtn>
         </Container>
       </MoreClients>
+     <Container><ListTopPip></ListTopPip></Container> 
+      <Container><ListState></ListState></Container>
+ 
       <Footerr></Footerr>
+
     </>
   );
 };

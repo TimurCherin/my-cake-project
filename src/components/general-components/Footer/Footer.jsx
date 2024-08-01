@@ -5,9 +5,10 @@ import inst from "../../../svg/Instagram.svg";
 const Foooter = styled.footer`
   background: var(--Black, #011936);
   box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.1);
-  width: max;
+  // width: 1920px;
+  // width: max;
   display: flex;
-  align-items: center;
+align-items: center;
   padding: 35px 200px;
   gap: 50px;
 `;
