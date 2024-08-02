@@ -6,6 +6,7 @@ import Login from "../../imgs/login.svg";
 import Position from "../../imgs/position.svg";
 import styled from "styled-components";
 // import Articles from "../Articles.jsx";
+// import GoodsPage from "../Goods/GoodsPage";
 // !hero imgs
 import heroProductImg1 from "../../imgs/hero-products/hero-cake-1.jpg";
 import heroProductImg2 from "../../imgs/hero-products/hero-cake-2.jpg";
@@ -805,11 +806,12 @@ export const Main = () => {
           </MoreClientsBtn>
         </Container>
       </MoreClients>
-     <Container><ListTopPip></ListTopPip></Container> 
+      <Container><ListTopPip></ListTopPip></Container>
       <Container><ListState></ListState></Container>
- 
+
       <Footerr></Footerr>
 
     </>
   );
 };
+
