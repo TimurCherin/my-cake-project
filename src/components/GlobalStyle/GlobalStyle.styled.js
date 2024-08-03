@@ -9,6 +9,7 @@ const GlobalStyle = createGlobalStyle`
   padding: 0;
   border: none;
   outline: none;
+  box-sizing: border-box;
 }
 ul {
   list-style: none;
@@ -41,7 +42,9 @@ textarea {
   outline: none;
   resize: none;
 }
-
+button{
+  cursor: pointer;
+}
 `;
 
 export default GlobalStyle;

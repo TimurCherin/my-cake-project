@@ -6,6 +6,8 @@ import Login from "../../imgs/login.svg";
 import Position from "../../imgs/position.svg";
 import styled from "styled-components";
 // import Articles from "../Articles.jsx";
+// import GoodsPage from "../Goods/GoodsPage";
+// import ConfectionerProducts from "../ConfectionerProducts/ConfectionerProducts.jsx";
 // !hero imgs
 import heroProductImg1 from "../../imgs/hero-products/hero-cake-1.jpg";
 import heroProductImg2 from "../../imgs/hero-products/hero-cake-2.jpg";
@@ -57,6 +59,10 @@ const HeaderList = styled.ul`
   gap: 30px;
   display: flex;
   align-items: center;
+
+  li:hover {
+    cursor: pointer;
+  }
 `;
 
 const HeaderLink = styled.a`
@@ -127,6 +133,10 @@ const HeroSearchInputBox = styled.div`
   display: flex;
   align-items: center;
   margin-top: 30px;
+
+  button:hover {
+    cursor: pointer;
+  }
 `;
 
 const HeroSearchInput = styled.input`
@@ -135,7 +145,7 @@ const HeroSearchInput = styled.input`
   border: 1px solid #dfdfdf;
   width: 720px;
   height: 48px;
-  // padding: 10px 20px;
+  padding: 0 20px 0 20px;
 `;
 
 const HeroSearchBtn = styled.button`
@@ -230,6 +240,11 @@ const HeroProductsList = styled.ul`
       line-height: 24px; /* 133.333% */
       text-align: center;
       margin-top: 10px;
+    }
+
+    h2:hover {
+      cursor: pointer;
+      text-decoration: underline;
     }
   }
 `;
@@ -419,6 +434,7 @@ export const Main = () => {
         </Container>
       </Header>
       {/* <Articles></Articles> */}
+      {/* <ConfectionerProducts></ConfectionerProducts> */}
       <Hero>
         <Container>
           <HeroFlexBox>
@@ -805,11 +821,13 @@ export const Main = () => {
           </MoreClientsBtn>
         </Container>
       </MoreClients>
-     <Container><ListTopPip></ListTopPip></Container> 
+      <Container><ListTopPip></ListTopPip></Container>
       <Container><ListState></ListState></Container>
+
  <Container>  <Footerr></Footerr></Container>
     
 
     </>
   );
 };
+
