@@ -59,6 +59,10 @@ const HeaderList = styled.ul`
   gap: 30px;
   display: flex;
   align-items: center;
+
+  li:hover {
+    cursor: pointer;
+  }
 `;
 
 const HeaderLink = styled.a`
@@ -129,6 +133,10 @@ const HeroSearchInputBox = styled.div`
   display: flex;
   align-items: center;
   margin-top: 30px;
+
+  button:hover {
+    cursor: pointer;
+  }
 `;
 
 const HeroSearchInput = styled.input`
@@ -137,7 +145,7 @@ const HeroSearchInput = styled.input`
   border: 1px solid #dfdfdf;
   width: 720px;
   height: 48px;
-  // padding: 10px 20px;
+  padding: 0 20px 0 20px;
 `;
 
 const HeroSearchBtn = styled.button`
@@ -232,6 +240,11 @@ const HeroProductsList = styled.ul`
       line-height: 24px; /* 133.333% */
       text-align: center;
       margin-top: 10px;
+    }
+
+    h2:hover {
+      cursor: pointer;
+      text-decoration: underline;
     }
   }
 `;
