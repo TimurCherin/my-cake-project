@@ -3,6 +3,7 @@ import { Container } from "../components/general-components/Container/Container.
 import backup from "./backup.svg";
 import data from "./data.json";
 import Searchbar from "../components/general-components/Searchbar/Searchbar.jsx";
+import Footerr from "../components/general-components/Footer/Footer.jsx";
 
 const safeArr = [];
 function createUniqueId() {
@@ -236,55 +237,70 @@ const Checkbox = styled.input`
 
 export default function Articles() {
   return (
-    <section>
-      <Container>
-        <Searchbar>
-          <input type="text" placeholder="Як приготувати класичний чізкейк" />
-          <button type="button">Шукати</button>
-        </Searchbar>
-        <div style={{ display: "flex", flexWrap: "wrap", paddingLeft: "20px", boxSizing: "border-box" }}>
-          <Filter>
-            <h2>Цікаві та корисні статті</h2>
-            <ul>
-              Тематика
-              <li key={createUniqueId()}>
-                <Checkbox type="checkbox"></Checkbox>
-                Рецепти
+    <>
+      <section>
+        <Container>
+          <Searchbar>
+            <input type="text" placeholder="Як приготувати класичний чізкейк" />
+            <button type="button">Шукати</button>
+          </Searchbar>
+          <div
+            style={{
+              display: "flex",
+              flexWrap: "wrap",
+              paddingLeft: "20px",
+              boxSizing: "border-box",
+            }}
+          >
+            <Filter>
+              <h2>Цікаві та корисні статті</h2>
+              <ul>
+                Тематика
+                <li key={createUniqueId()}>
+                  <Checkbox type="checkbox"></Checkbox>
+                  Рецепти
+                </li>
+                <li key={createUniqueId()}>
+                  <Checkbox type="checkbox"></Checkbox>
+                  Корисні поради на кухні
+                </li>
+                <li key={createUniqueId()}>
+                  <Checkbox type="checkbox"></Checkbox>
+                  Підбірки
+                </li>
+                <li key={createUniqueId()}>
+                  <Checkbox type="checkbox"></Checkbox>
+                  Робота з клієнтами
+                </li>
+                <li key={createUniqueId()}>
+                  <Checkbox type="checkbox"></Checkbox>
+                  Цікаві історії
+                </li>
+              </ul>
+            </Filter>
+            <List>{result}</List>
+            <LoadMore>
+              <img src={backup} alt="LoadMore" />
+              Більше статей
+            </LoadMore>
+            <Pagination>
+              <LeftArrow>&#x3c;</LeftArrow>
+              <li key={createUniqueId()}>1</li>
+              <li key={createUniqueId()}>2</li>
+              <li
+                key={createUniqueId()}
+                style={{ fontWeight: "700", background: "#FDAD6D" }}
+              >
+                3
               </li>
-              <li key={createUniqueId()}>
-                <Checkbox type="checkbox"></Checkbox>
-                Корисні поради на кухні
-              </li>
-              <li key={createUniqueId()}>
-                <Checkbox type="checkbox"></Checkbox>
-                Підбірки
-              </li>
-              <li key={createUniqueId()}>
-                <Checkbox type="checkbox"></Checkbox>
-                Робота з клієнтами
-              </li>
-              <li key={createUniqueId()}>
-                <Checkbox type="checkbox"></Checkbox>
-                Цікаві історії
-              </li>
-            </ul>
-          </Filter>
-          <List>{result}</List>
-          <LoadMore>
-            <img src={backup} alt="LoadMore" />
-            Більше статей
-          </LoadMore><Pagination>
-          <LeftArrow>&#x3c;</LeftArrow>
-          <li key={createUniqueId()}>1</li>
-          <li key={createUniqueId()}>2</li>
-          <li key={createUniqueId()} style={{fontWeight: "700", background:"#FDAD6D"}}>3</li>
-          <li key={createUniqueId()}>4</li>
-          <li key={createUniqueId()}>5</li>
-          <RightArrow>&#x3e;</RightArrow>
-        </Pagination>
-        </div>
-        
-      </Container>
-    </section>
+              <li key={createUniqueId()}>4</li>
+              <li key={createUniqueId()}>5</li>
+              <RightArrow>&#x3e;</RightArrow>
+            </Pagination>
+          </div>
+        </Container>
+      </section>
+      <Footerr></Footerr>
+    </>
   );
 }
