@@ -22,7 +22,7 @@ const GlawText = styled.h2`
 const Location = styled.div`
   gap: 10px;
   margin-top: 10px;
-  width: 150px;
+
   display: flex;
   height: 40px;
   padding: 5px 20px;
@@ -143,10 +143,11 @@ const BtnSock = styled.button`
 const BoxesInst = styled.div`
   background: var(--Black, #011936);
   display: flex;
-  gap: 20px;
+  gap: 15px;
 `;
 
 const Links = styled.a``;
+
 const List = styled.ul`
 display: flex;
 align-items: center;
