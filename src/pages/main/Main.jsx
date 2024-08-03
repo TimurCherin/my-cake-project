@@ -807,8 +807,8 @@ export const Main = () => {
       </MoreClients>
      <Container><ListTopPip></ListTopPip></Container> 
       <Container><ListState></ListState></Container>
- 
-      <Footerr></Footerr>
+ <Container>  <Footerr></Footerr></Container>
+    
 
     </>
   );

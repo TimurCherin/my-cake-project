@@ -8,9 +8,8 @@ const Foooter = styled.footer`
   // width: 1920px;
   // width: max;
   display: flex;
-align-items: center;
-  padding: 35px 200px;
-  gap: 50px;
+  align-items: center;
+  padding: 35px;
 `;
 const GlawText = styled.h2`
   color: var(--White, #fff);
@@ -66,15 +65,14 @@ SvgLocation.defaultProps = {
 
 const SvgInst = styled.img`
   width: 40px;
-height: 40px;
-
+  height: 40px;
 `;
 SvgInst.defaultProps = {
   src: inst,
 };
 const SvgYutybe = styled.img`
   width: 40px;
-height: 40px;
+  height: 40px;
 `;
 SvgYutybe.defaultProps = {
   src: yut,
@@ -117,25 +115,28 @@ const BoxesBtn = styled.div`
   margin-left: 100px;
 `;
 const TextInfoInst = styled.p`
-color: var(--White, #FFF);
-font-family: Verdana;
-font-size: 14px;
-font-style: normal;
-font-weight: 400;
-line-height: 120%;`;
+  color: var(--White, #fff);
+  font-family: Verdana;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 120%;
+`;
 const BoxTextInfoInst = styled.div`
-display: flex;
-flex-direction: column;
-justify-content: center;
-align-items: flex-end;
-gap: 15px;`;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+  gap: 15px;
+  margin-left: 80px;
+`;
 
 const BtnSock = styled.button`
-display: flex;
-width: 40px;
-height: 40px;
-justify-content: center;
-align-items: center;
+  display: flex;
+  width: 40px;
+  height: 40px;
+  justify-content: center;
+  align-items: center;
   border-radius: 50px;
 `;
 
@@ -145,33 +146,60 @@ const BoxesInst = styled.div`
   gap: 20px;
 `;
 
+const Links = styled.a``;
+const List = styled.ul`
+display: flex;
+align-items: center;
+`;
 export default function Footerr() {
   return (
+    <>
     <Foooter>
-      <Boxes>
-        <GlawText>My Cake</GlawText>
-        <Location>
-          <SvgLocation href={location} />
-          <TextInLocete>Вся Україна</TextInLocete>
-        </Location>
-      </Boxes>
-      <BoxesFlex>
-        <MediumText>Десерти</MediumText>
-        <MediumText>Кращі кондитери</MediumText>
-        <MediumText>Корисні статті</MediumText>
-      </BoxesFlex>
-      <BoxesBtn>
-        <BtnPrav>Правила користування</BtnPrav>
-        <BtnInfo>Форма зворотнього зв’язку</BtnInfo>
-      </BoxesBtn>
-      <BoxTextInfoInst>
-        <TextInfoInst>© Mycake 2022</TextInfoInst>
-        <TextInfoInst>All rights reserved</TextInfoInst>
-        <BoxesInst>
-        <SvgInst href={inst} />
-        <SvgYutybe href={yut} />
-        </BoxesInst>
-      </BoxTextInfoInst>
+      <List>
+        <li>
+          <Boxes>
+            <GlawText>My Cake</GlawText>
+            <Location>
+              <SvgLocation href={location} />
+              <TextInLocete>Вся Україна</TextInLocete>
+            </Location>
+          </Boxes>
+        </li>
+        <li>
+          <BoxesFlex>
+            <Links href="#">
+              <MediumText>Десерти</MediumText>
+            </Links>
+            <Links href="#">
+              <MediumText>Кращі кондитери</MediumText>
+            </Links>
+            <Links href="#">
+              <MediumText>Корисні статті</MediumText>
+            </Links>
+          </BoxesFlex>
+        </li>
+        <li>
+          <BoxesBtn>
+            <BtnPrav>Правила користування</BtnPrav>
+            <BtnInfo>Форма зворотнього зв’язку</BtnInfo>
+          </BoxesBtn>
+        </li>
+        <li>
+          <BoxTextInfoInst>
+            <TextInfoInst>© Mycake 2022</TextInfoInst>
+            <TextInfoInst>All rights reserved</TextInfoInst>
+            <BoxesInst>
+              <Links href="https://www.instagram.com/">
+                <SvgInst href={inst} />
+              </Links>
+              <Links href="https://www.youtube.com/">
+                <SvgYutybe href={yut} />
+              </Links>
+            </BoxesInst>
+          </BoxTextInfoInst>
+        </li>
+      </List>
     </Foooter>
+    </>
   );
 }
