@@ -43,4 +43,9 @@ const Searchbar = styled.div`
   }
 `;
 
-export default Searchbar;
+export default ({ placeholder }) => <>
+  <Searchbar>
+    <input type="text" placeholder={placeholder} />
+    <button type="button">Шукати</button>
+  </Searchbar>
+</>;
