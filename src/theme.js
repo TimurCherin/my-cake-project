@@ -10,6 +10,8 @@ export const theme = {
     title: "35px",
     text: "16px",
     buttonsText: "14px",
+    subtitle: "24px",
+    quote: "18px"
   },
   shadows: {
     cupcakesCard: "0px 2px 5px 0px rgba(67, 96, 124, 0.15)",

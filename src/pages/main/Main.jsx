@@ -7,6 +7,7 @@ import Position from "../../imgs/position.svg";
 import styled from "styled-components";
 // import Articles from "../Articles.jsx";
 // import GoodsPage from "../Goods/GoodsPage";
+// import ConfectionerProducts from "../ConfectionerProducts/ConfectionerProducts.jsx";
 // !hero imgs
 import heroProductImg1 from "../../imgs/hero-products/hero-cake-1.jpg";
 import heroProductImg2 from "../../imgs/hero-products/hero-cake-2.jpg";
@@ -420,6 +421,7 @@ export const Main = () => {
         </Container>
       </Header>
       {/* <Articles></Articles> */}
+      {/* <ConfectionerProducts></ConfectionerProducts> */}
       <Hero>
         <Container>
           <HeroFlexBox>
