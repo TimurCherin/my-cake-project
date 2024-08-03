@@ -37,6 +37,8 @@ import { Cakes } from "../../components/main-page/Cakes/Cakes-styled";
 import { Cupcakes } from "../../components/main-page/Cupcakes/Cupcakes.styled";
 import { MoreClients } from "../../components/main-page/More-clients/MoreClients.styled";
 import { List } from "../../components/general-components/List/List.styled";
+import { CakeCard } from "../../components/general-components/CakeCard/CakeCard";
+import { SeeAllBox } from "../../components/general-components/SeeAllBox/SeeAllBox";
 import Btn from "../../components/general-components/Btn/Btn";
 
 import Footerr from "../../components/general-components/Footer/Footer";
@@ -293,25 +295,6 @@ const CakesBox = styled.div`
   align-items: center;
 `;
 
-const CakesBtnsBox = styled.div`
-  margin-left: auto;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-`;
-
-const CakesBtnSeeAll = styled.button`
-  padding: 5px 20px;
-  border-radius: 30px;
-  background-color: #dcebf8;
-  color: ${(props) => props.theme.colors.textColor};
-  font-family: Verdana;
-  font-size: ${(props) => props.theme.spacings(3.5)};
-  font-style: normal;
-  font-weight: 400;
-  line-height: 24px; /* 171.429% */
-`;
-
 const CakesArrowBtn = styled.button`
   background-color: transparent;
   border: none;
@@ -327,45 +310,6 @@ const CakesList = styled.ul`
   /* li {
     height: 424px;
   } */
-`;
-
-const CakeCardTitle = styled.h2`
-  color: ${(props) => props.theme.colors.accentColor};
-  font-family: Verdana;
-  font-size: ${(props) => props.theme.spacings(4.5)};
-  font-weight: 700;
-  line-height: 120%;
-  /* margin-top: 15px; */
-`;
-
-const CakeCardSubtitle = styled.p`
-  color: ${(props) => props.theme.colors.titleColor};
-  font-family: Verdana;
-  font-size: ${(props) => props.theme.spacings(4)};
-  font-weight: 400;
-  line-height: 20px;
-  /* margin-top: 10px; */
-  max-width: 250px;
-`;
-
-const CakeCardDescription = styled.p`
-  color: #84a6c2;
-  font-family: Verdana;
-  font-size: ${(props) => props.theme.spacings(3.5)};
-  font-weight: 400;
-  line-height: 120%;
-  /* margin-top: 5px; */
-`;
-
-const CakesCardBox = styled.div`
-  padding: 15px 15px 15px 15px;
-  box-shadow: ${(props) => props.theme.shadows.cupcakesCard};
-  border-radius: 5px;
-  height: 114px;
-  display: flex;
-  /* align-items: center; */
-  justify-content: space-between;
-  flex-direction: column;
 `;
 
 const MoreClientsTitle = styled.h2`
@@ -601,104 +545,39 @@ export const Main = () => {
         <Container>
           <CakesBox>
             <CakesTitle>Торти</CakesTitle>
-            <CakesBtnsBox>
-              <CakesBtnSeeAll type="button">Переглянути всі</CakesBtnSeeAll>
-              <CakesArrowBtn type="button">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                >
-                  <g clip-path="url(#clip0_5811_9696)">
-                    <path
-                      d="M15.4102 16.59L10.8302 12L15.4102 7.41L14.0002 6L8.00016 12L14.0002 18L15.4102 16.59Z"
-                      fill="#43607C"
-                    />
-                  </g>
-                  <defs>
-                    <clipPath id="clip0_5811_9696">
-                      <rect
-                        width="24"
-                        height="24"
-                        fill="white"
-                        transform="matrix(-1 0 0 1 24 0)"
-                      />
-                    </clipPath>
-                  </defs>
-                </svg>
-              </CakesArrowBtn>
-              <CakesArrowBtn type="button">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                >
-                  <g clip-path="url(#clip0_5811_8201)">
-                    <path
-                      d="M8.58984 16.59L13.1698 12L8.58984 7.41L9.99984 6L15.9998 12L9.99984 18L8.58984 16.59Z"
-                      fill="#43607C"
-                    />
-                  </g>
-                  <defs>
-                    <clipPath id="clip0_5811_8201">
-                      <rect width="24" height="24" fill="white" />
-                    </clipPath>
-                  </defs>
-                </svg>
-              </CakesArrowBtn>
-            </CakesBtnsBox>
+            <SeeAllBox />
           </CakesBox>
           <CakesList>
-            <li>
-              <img src={cakeImg1} alt="cake-1" />
-              <CakesCardBox>
-                <CakeCardTitle>520 грн</CakeCardTitle>
-                <CakeCardSubtitle>
-                  Торт “Літнє бажання” з шоколадом та макарунами
-                </CakeCardSubtitle>
-                <CakeCardDescription>4 варіанти начинок</CakeCardDescription>
-              </CakesCardBox>
-            </li>
-            <li>
-              <img src={cakeImg2} alt="cake-2" />
-              <CakesCardBox>
-                <CakeCardTitle>520 грн</CakeCardTitle>
-                <CakeCardSubtitle>
-                  Весільний триярусний торт з фруктами та квітами
-                </CakeCardSubtitle>
-                <CakeCardDescription>4 варіанти начинок</CakeCardDescription>
-              </CakesCardBox>
-            </li>
-            <li>
-              <img src={cakeImg3} alt="cake-3" />
-              <CakesCardBox>
-                <CakeCardTitle>520 грн</CakeCardTitle>
-                <CakeCardSubtitle>Бісквітний торт з ягодами</CakeCardSubtitle>
-                <CakeCardDescription>4 варіанти начинок</CakeCardDescription>
-              </CakesCardBox>
-            </li>
-            <li>
-              <img src={cakeImg4} alt="cake-4" />
-              <CakesCardBox>
-                <CakeCardTitle>520 грн</CakeCardTitle>
-                <CakeCardSubtitle>
-                  Ванільно-карамельний торт з печивом Орео
-                </CakeCardSubtitle>
-                <CakeCardDescription>4 варіанти начинок</CakeCardDescription>
-              </CakesCardBox>
-            </li>
-            <li>
-              <img src={cakeImg5} alt="cake-5" />
-              <CakesCardBox>
-                <CakeCardTitle>520 грн</CakeCardTitle>
-                <CakeCardSubtitle>Торт рожевий з макарунами</CakeCardSubtitle>
-                <CakeCardDescription>4 варіанти начинок</CakeCardDescription>
-              </CakesCardBox>
-            </li>
+            <CakeCard
+              imgUrl={cakeImg1}
+              price={520}
+              subtitle={"Торт “Літнє бажання” з шоколадом та макарунами"}
+              description={"4 варіанти начинок"}
+            />
+            <CakeCard
+              imgUrl={cakeImg2}
+              price={520}
+              subtitle={"Весільний триярусний торт з фруктами та квітами"}
+              description={"4 варіанти начинок"}
+            />
+            <CakeCard
+              imgUrl={cakeImg3}
+              price={520}
+              subtitle={"Бісквітний торт з ягодами"}
+              description={"4 варіанти начинок"}
+            />
+            <CakeCard
+              imgUrl={cakeImg4}
+              price={520}
+              subtitle={"Ванільно-карамельний торт з печивом Орео"}
+              description={"4 варіанти начинок"}
+            />
+            <CakeCard
+              imgUrl={cakeImg5}
+              price={520}
+              subtitle={"Торт рожевий з макарунами"}
+              description={"4 варіанти начинок"}
+            />
           </CakesList>
         </Container>
       </Cakes>
@@ -706,104 +585,39 @@ export const Main = () => {
         <Container>
           <CakesBox>
             <CakesTitle>Капкейки</CakesTitle>
-            <CakesBtnsBox>
-              <CakesBtnSeeAll>Переглянути всі</CakesBtnSeeAll>
-              <CakesArrowBtn>
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                >
-                  <g clip-path="url(#clip0_5811_9696)">
-                    <path
-                      d="M15.4102 16.59L10.8302 12L15.4102 7.41L14.0002 6L8.00016 12L14.0002 18L15.4102 16.59Z"
-                      fill="#43607C"
-                    />
-                  </g>
-                  <defs>
-                    <clipPath id="clip0_5811_9696">
-                      <rect
-                        width="24"
-                        height="24"
-                        fill="white"
-                        transform="matrix(-1 0 0 1 24 0)"
-                      />
-                    </clipPath>
-                  </defs>
-                </svg>
-              </CakesArrowBtn>
-              <CakesArrowBtn>
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                >
-                  <g clip-path="url(#clip0_5811_8201)">
-                    <path
-                      d="M8.58984 16.59L13.1698 12L8.58984 7.41L9.99984 6L15.9998 12L9.99984 18L8.58984 16.59Z"
-                      fill="#43607C"
-                    />
-                  </g>
-                  <defs>
-                    <clipPath id="clip0_5811_8201">
-                      <rect width="24" height="24" fill="white" />
-                    </clipPath>
-                  </defs>
-                </svg>
-              </CakesArrowBtn>
-            </CakesBtnsBox>
+            <SeeAllBox />
           </CakesBox>
           <CakesList>
-            <li>
-              <img src={cupcakeImg1} alt="cupcake-1" />
-              <CakesCardBox>
-                <CakeCardTitle>520 грн</CakeCardTitle>
-                <CakeCardSubtitle>
-                  Пасхальні капкейки шоколадні та ванільні
-                </CakeCardSubtitle>
-                <CakeCardDescription>4 варіанти начинок</CakeCardDescription>
-              </CakesCardBox>
-            </li>
-            <li>
-              <img src={cupcakeImg2} alt="cupcake-2" />
-              <CakesCardBox>
-                <CakeCardTitle>520 грн</CakeCardTitle>
-                <CakeCardSubtitle>
-                  Оригінальні капкейки з кремом та печивом
-                </CakeCardSubtitle>
-                <CakeCardDescription>4 варіанти начинок</CakeCardDescription>
-              </CakesCardBox>
-            </li>
-            <li>
-              <img src={cupcakeImg3} alt="cupcake-3" />
-              <CakesCardBox>
-                <CakeCardTitle>520 грн</CakeCardTitle>
-                <CakeCardSubtitle>Капкейки з карамеллю 3 шт</CakeCardSubtitle>
-                <CakeCardDescription>4 варіанти начинок</CakeCardDescription>
-              </CakesCardBox>
-            </li>
-            <li>
-              <img src={cupcakeImg4} alt="cupcake-4" />
-              <CakesCardBox>
-                <CakeCardTitle>520 грн</CakeCardTitle>
-                <CakeCardSubtitle>Капкейки з ніжним кремом</CakeCardSubtitle>
-                <CakeCardDescription>4 варіанти начинок</CakeCardDescription>
-              </CakesCardBox>
-            </li>
-            <li>
-              <img src={cupcakeImg5} alt="cupcake-5" />
-              <CakesCardBox>
-                <CakeCardTitle>520 грн</CakeCardTitle>
-                <CakeCardSubtitle>
-                  Чорні капкейки з шоколадом та печивом
-                </CakeCardSubtitle>
-                <CakeCardDescription>4 варіанти начинок</CakeCardDescription>
-              </CakesCardBox>
-            </li>
+            <CakeCard
+              imgUrl={cupcakeImg1}
+              price={520}
+              subtitle={"Пасхальні капкейки шоколадні та ванільні"}
+              description={"4 варіанти начинок"}
+            />
+            <CakeCard
+              imgUrl={cupcakeImg2}
+              price={520}
+              subtitle={"Оригінальні капкейки з кремом та печивом"}
+              description={"4 варіанти начинок"}
+            />
+            <CakeCard
+              imgUrl={cupcakeImg3}
+              price={520}
+              subtitle={"Капкейки з карамеллю 3 шт"}
+              description={"4 варіанти начинок"}
+            />
+            <CakeCard
+              imgUrl={cupcakeImg4}
+              price={520}
+              subtitle={"Капкейки з ніжним кремом"}
+              description={"4 варіанти начинок"}
+            />
+            <CakeCard
+              imgUrl={cupcakeImg5}
+              price={520}
+              subtitle={"Чорні капкейки з шоколадом та печивом"}
+              description={"4 варіанти начинок"}
+            />
           </CakesList>
         </Container>
       </Cupcakes>
@@ -821,12 +635,14 @@ export const Main = () => {
           </MoreClientsBtn>
         </Container>
       </MoreClients>
-      <Container><ListTopPip></ListTopPip></Container>
-      <Container><ListState></ListState></Container>
+      <Container>
+        <ListTopPip></ListTopPip>
+      </Container>
+      <Container>
+        <ListState></ListState>
+      </Container>
 
       <Footerr></Footerr>
-
     </>
   );
 };
-
