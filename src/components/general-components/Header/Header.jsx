@@ -69,7 +69,7 @@ const HeaderWrapper = styled.div`
 
 const Header = () => {
   return (
-    <Header>
+    <header>
       <Container>
         <HeaderWrapper>
           <Logo>MyCake</Logo>
@@ -96,7 +96,7 @@ const Header = () => {
           </HeaderBlock>
         </HeaderWrapper>
       </Container>
-    </Header>
+    </header>
   );
 };
 
